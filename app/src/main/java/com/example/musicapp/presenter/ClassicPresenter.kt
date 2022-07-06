@@ -7,10 +7,11 @@ import com.example.musicapp.rest.MusicRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
 
-class ClassicPresenter(private val musicRepository: MusicRepository,
-                       private val compositeDisposable: CompositeDisposable,
-                       private val localClassicRepository: LocalDataRepository
+class ClassicPresenter@Inject constructor(private val musicRepository: MusicRepository,
+                                          private val compositeDisposable: CompositeDisposable,
+                                          private val localClassicRepository: LocalDataRepository
 ) : ClassicPresenterContract {
 
     private var classicViewContract: ClassicViewContract? = null
@@ -64,6 +65,6 @@ interface ClassicPresenterContract {
 }
 interface ClassicViewContract {
     fun loadingClassic(isLoading: Boolean = false)
-    fun successResponse(cards: List<DomainMusic>, isOffline: Boolean = false)
+    fun successResponse(music: List<DomainMusic>, isOffline: Boolean = false)
     fun error(error: Throwable)
 }

@@ -84,4 +84,3 @@ class RockFragment : Fragment(), RockViewContract {
         rockPresenterContract.destroyPresenter()
     }
 }
-}

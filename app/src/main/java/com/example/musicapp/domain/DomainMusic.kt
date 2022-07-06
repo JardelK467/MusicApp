@@ -22,10 +22,10 @@ data class DomainMusic(
         return this.map { networkCard ->
             DomainMusic(
                 id = networkCard.artistId ?: 9999,
-                artistName = networkCard.artistName ?: "Invalid name",
-                artworkUrl60 = networkCard.artworkUrl60 ?: "",
-                collectionName = networkCard.collectionName ?: "",
-                trackPrice = networkCard.trackPrice ?: 0.0,
+                artistName = networkCard.artistName ?: "Invalid artist name",
+                artworkUrl60 = networkCard.artworkUrl60 ?: "Invalid image",
+                collectionName = networkCard.collectionName ?: "invalid collection name",
+                trackPrice = networkCard.trackPrice ?: 0.0
             )
         }
     }

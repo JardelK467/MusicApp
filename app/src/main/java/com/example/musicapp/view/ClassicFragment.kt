@@ -53,7 +53,7 @@ class ClassicFragment : Fragment(), ClassicViewContract {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        MusicApp.component.inject(this)
+       MusicApp.component.inject(this)
     }
 
     override fun onCreateView(

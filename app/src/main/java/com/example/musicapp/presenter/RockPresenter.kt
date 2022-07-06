@@ -72,6 +72,6 @@ interface RockPresenterContract {
 }
 interface RockViewContract {
     fun loadingRock(isLoading: Boolean = false)
-    fun successResponse(cards: List<DomainMusic>, isOffline: Boolean = false)
+    fun successResponse(music: List<DomainMusic>, isOffline: Boolean = false)
     fun error(error: Throwable)
 }

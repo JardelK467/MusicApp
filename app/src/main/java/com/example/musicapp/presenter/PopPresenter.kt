@@ -8,10 +8,11 @@ import com.example.musicapp.view.PopFragment
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
 
-class PopPresenter(private val musicRepository: MusicRepository,
-                       private val compositeDisposable: CompositeDisposable,
-                       private val localPopRepository: LocalDataRepository
+class PopPresenter@Inject constructor(private val musicRepository: MusicRepository,
+                                      private val compositeDisposable: CompositeDisposable,
+                                      private val localPopRepository: LocalDataRepository
 ) : PopPresenterContract {
 
     private var popViewContract: PopViewContract? = null
@@ -65,6 +66,6 @@ interface PopPresenterContract {
 }
 interface PopViewContract {
     fun loadingPop(isLoading: Boolean = false)
-    fun successResponse(cards: List<DomainMusic>, isOffline: Boolean = false)
+    fun successResponse(music: List<DomainMusic>, isOffline: Boolean = false)
     fun error(error: Throwable)
 }
