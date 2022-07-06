@@ -72,7 +72,7 @@ class ClassicFragment : Fragment(), ClassicViewContract {
     }
 
     override fun successResponse(songs: List<DomainMusic>, isOffline: Boolean) {
-        TODO("Not yet implemented")
+        musicAdapter.updateMusicList(songs)
     }
 
     override fun error(error: Throwable) {

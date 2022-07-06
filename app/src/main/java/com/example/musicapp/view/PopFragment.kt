@@ -59,15 +59,15 @@ class PopFragment : Fragment(), PopViewContract {
 
 
     override fun loadingPop(isLoading: Boolean) {
-        //TODO("Not yet implemented")
+        //indicate that the music selected is loading
     }
 
     override fun successResponse(songs: List<DomainMusic>, isOffline: Boolean) {
-        TODO("Not yet implemented")
+        musicAdapter.updateMusicList(songs)
     }
 
     override fun error(error: Throwable) {
-        // TODO("Not yet implemented")
+        //Shows an error message
     }
 
     override fun onDestroy() {
