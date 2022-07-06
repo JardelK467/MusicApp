@@ -8,7 +8,8 @@ import retrofit2.http.Query
 
 interface MusicServiceApi {
         @GET(PATH)
-        fun getSongs(@Query("term") musicType : String,
+        fun getSongs(
+            @Query("term") musicType : String,
             @Query("amp;media") media: String = "music",
             @Query("amp;entity") song : String = "song",
             @Query("amp;limit") limit: Int = 50): Single<MusicResponse>
@@ -16,7 +17,7 @@ interface MusicServiceApi {
 
     companion object {
             const val BASE_URL = "https://itunes.apple.com/"
-            private const val PATH = "search?term=pop&amp;media=music&amp;entity=song&amp;limit=50"
+        private const val PATH = "search"
         }
 
 }

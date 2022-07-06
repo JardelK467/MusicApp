@@ -26,7 +26,7 @@ class RestModule {
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient, gson: Gson): Retrofit =
         Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(MusicServiceApi.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(okHttpClient)
             .build()
@@ -47,7 +47,5 @@ class RestModule {
     fun provideCompositeDisposable(): CompositeDisposable =
         CompositeDisposable()
 
-companion object {
-    const val BASE_URL = "https://itunes.apple.com/"
-}
+
 }

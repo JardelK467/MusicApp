@@ -1,7 +1,6 @@
 package com.example.musicapp.view
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,18 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.musicapp.MusicApp
 import com.example.musicapp.adapter.MusicAdapter
-import com.example.musicapp.databinding.FragmentPopBinding
-import com.example.musicapp.model.MusicResponse
 import com.example.musicapp.databinding.FragmentRockBinding
 import com.example.musicapp.domain.DomainMusic
-import com.example.musicapp.presenter.PopPresenterContract
 import com.example.musicapp.presenter.RockPresenterContract
 import com.example.musicapp.presenter.RockViewContract
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Inject
 
 class RockFragment : Fragment(), RockViewContract {
